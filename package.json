@@ -1,0 +1,43 @@
+{
+  "name": "part-c-textbook",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node server/index.js --dev",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test": "node --test tests/*.test.js",
+    "db:migrate": "node scripts/migrate-postgres.mjs",
+    "db:import": "node scripts/import-sqlite.mjs",
+    "test:postgres": "node scripts/test-postgres.mjs",
+    "test:hosted": "node scripts/smoke-hosted.mjs",
+    "deploy:backend": "neon deploy"
+  },
+  "dependencies": {
+    "@fontsource/cinzel": "^5.3.0",
+    "@fontsource/eb-garamond": "^5.3.0",
+    "@hono/node-server": "^2.1.3",
+    "@neon/functions": "^0.11.0",
+    "express": "^5.1.0",
+    "hono": "^4.13.13",
+    "katex": "^0.16.22",
+    "lucide-react": "^0.468.0",
+    "pg": "^8.23.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "@neon/config": "^1.8.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "neon": "^8.0.8",
+    "vite": "^7.1.0"
+  }
+}
